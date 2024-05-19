@@ -1,0 +1,45 @@
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: solid white 1px; */
+  /* margin: 0px 0px 0px 12vh; */
+  margin-top: 7vh;
+}
+
+.icon {
+  position: relative;
+}
+.main {
+  height: 60vh;
+  width: auto;
+}
+
+.instagram {
+  transform: translateX(+100%);
+  top: +5px;
+  right: -15px;
+  height: 10vh;
+  width: auto;
+  z-index: 100;
+}
+.linkedin {
+  top: +5px;
+  right: +15px;
+  transform: translateX(-100%);
+  /* transform: translateY(-50%); */
+  height: 10vh;
+  width: auto;
+  z-index: 100;
+}
+.info-contact-container {
+  z-index: 100;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  top: 41vh;
+  font-size: 3vh;
+}

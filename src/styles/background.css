@@ -1,0 +1,12 @@
+.background-container {
+  background: linear-gradient(
+    to bottom,
+    #00008b,
+    #000000
+  ); /* Dark blue to black gradient */
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+}
