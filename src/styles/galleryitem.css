@@ -1,22 +1,16 @@
 .grid-item {
-  flex: 1 1 200px;
-  margin: 10px;
-}
-
-.text-overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  text-align: center;
+  height: 500px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  z-index: 10;
+  align-items: center;
 }
 
-.text-overlay p {
-  color: white;
-  font-size: 1.25rem; /* Equivalent to text-xl in Tailwind */
-  font-weight: bold;
+.grid-item-image {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  object-fit: cover;
+  border-radius: 10px;
 }

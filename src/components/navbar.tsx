@@ -5,9 +5,14 @@ import logo from "../../public/images/logo/APSIDEU_LOGO_WHITE.png";
 
 // import ApsideuLogo from '@/app/images/logo';
 
-export default function Navbar() {
+interface Scrollable {
+  scrollable: string;
+}
+
+export default function Navbar(props: Scrollable) {
   return (
-    <div className="nav-container">
+    // console.log({`nav-container ${props}`})
+    <div className={`nav-container ${props}`}>
       <Link className="nav-item" href="/info">
         Info
       </Link>

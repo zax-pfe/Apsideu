@@ -8,7 +8,7 @@ export default async function ContactPage() {
   return (
     <div>
       <Background>
-        <Navbar />
+        <Navbar scrollable="non-scrollable" />
         <Contact />
       </Background>
     </div>

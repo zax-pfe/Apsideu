@@ -7,8 +7,7 @@ export default async function Blog() {
   return (
     <div>
       <Background>
-        <Navbar />
-        Blog
+        <Navbar scrollable="non-scrollable" />
       </Background>
     </div>
   );

@@ -7,7 +7,7 @@ import Navbar from "@/components/navbar";
 export default async function Home() {
   return (
     <div>
-      <Navbar />
+      <Navbar scrollable="non-scrollable" />
       <Hero imgData={HomeImage} imgAlt="jolie miss" />
     </div>
   );

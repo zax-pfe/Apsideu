@@ -8,9 +8,8 @@ export default async function Catalogue() {
   return (
     <div>
       <Background>
-        <Navbar />
+        <Navbar scrollable="scrollable" />
         <Gallery />
-        Catalogue
       </Background>
     </div>
   );

@@ -28,11 +28,11 @@
 }
 
 .fade-out {
-  animation: fadeOut 0.5s forwards;
+  animation: fadeOut 0.7s forwards;
 }
 
 .fade-in {
-  animation: fadeIn 0.5s forwards;
+  animation: fadeIn 0.7s forwards;
 }
 .faded {
   opacity: 0;

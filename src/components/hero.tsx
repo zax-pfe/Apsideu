@@ -24,7 +24,7 @@ export default function Hero(props: HeroPorps) {
       console.log("ok");
       setBlackLayerAnimation("fade-out");
       console.log(`fade : ${blackLayerAnimation}`);
-      setTimeout(() => setBlackLayerAnimation("faded"), 500);
+      setTimeout(() => setBlackLayerAnimation("faded"), 700);
     }
     return () => {
       isUnmounted = true;

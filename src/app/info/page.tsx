@@ -8,7 +8,7 @@ export default async function About() {
   return (
     <div>
       <Background>
-        <Navbar />
+        <Navbar scrollable="non-scrollable" />
         <Info />
       </Background>
     </div>
