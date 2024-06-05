@@ -7,10 +7,10 @@ import Contact from "@/components/contact";
 export default async function ContactPage() {
   return (
     <div>
-      <Background>
-        <Navbar scrollable="non-scrollable" />
-        <Contact />
-      </Background>
+      {/* <Background> */}
+      <Navbar scrollable="non-scrollable" />
+      <Contact />
+      {/* </Background> */}
     </div>
   );
 }

@@ -1,14 +1,16 @@
 import "../styles/info.css";
 import Image from "next/image";
 import infoImage from "../../public/images/info/_MG_0870.jpg";
+import { DirectionAwareHover } from "./ui/direction-aware-hover";
 
 export default function Info() {
   return (
-    <div className="info-container">
-      <Image
-        className="image-info"
-        src={infoImage}
-        alt="Maxou le bg photographiant un boug"
+    <div>
+      <DirectionAwareHover
+        text="a"
+        imageUrl={infoImage}
+        // className="image-info"
+        // children="info"
       />
       <div className="info-text-container">
         <p>

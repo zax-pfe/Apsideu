@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={jost.className}>
         {/* <Navbar /> */}
-        {children}
+        <div className="background">{children}</div>
       </body>
     </html>
   );
