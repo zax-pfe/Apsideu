@@ -1,6 +1,7 @@
 .hero-container {
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 .hero-container img {
@@ -42,7 +43,7 @@
 
 .header-content .bar {
   border-top: solid white 1px;
-  width: 35vw;
+  width: 45vw;
   /* flex: 1; */
 }
 
@@ -64,5 +65,4 @@
   justify-content: end;
   font-size: 9vw;
   padding-right: 4vw;
-  transform: translateY(7vh); /* Déplace l'élément vers le bas de 20px */
 }
