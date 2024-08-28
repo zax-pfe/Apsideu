@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { inter, jost } from "@/app/fonts";
 import "./globals.css";
-import Navbar from "@/components/navbar";
 
 // export const metadata: Metadata = {
 //   title: "Create Next App",
@@ -16,8 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={jost.className}>
-        {/* <Navbar /> */}
-        <div className="background">{children}</div>
+        <div>{children}</div>
       </body>
     </html>
   );

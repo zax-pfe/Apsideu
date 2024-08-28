@@ -4,7 +4,6 @@ import Link from "next/link";
 import Hero from "@/components/hero";
 import HomeImageDorian from "../../public/images/catalogue/Nuit/heroImage.jpg";
 import HomeImageMiss from "../../public/images/home/HomeImage1.jpg";
-import Navbar from "@/components/navbar";
 import "../styles/page.css";
 import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
