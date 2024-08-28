@@ -3,12 +3,6 @@ import "../styles/navbar.css";
 import Image from "next/image";
 import logo from "../../public/images/logo/APSIDEU_LOGO_WHITE.png";
 
-// import ApsideuLogo from '@/app/images/logo';
-
-interface Scrollable {
-  scrollable: string;
-}
-
 export default function Navbar(props: Scrollable) {
   return (
     // console.log({`nav-container ${props}`})
