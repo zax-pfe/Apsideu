@@ -16,7 +16,10 @@ export default function Works() {
 
   return (
     <motion.div style={{ y: works }} className="works-container" ref={ref}>
-      galakoko
+      <div className="works-header">
+        <h1>works</h1>
+        <div className="bar"></div>
+      </div>
     </motion.div>
   );
 }
