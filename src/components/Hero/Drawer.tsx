@@ -115,9 +115,8 @@ export default function Drawer(props: drawerProps) {
         </motion.div>
         <div className="drawer-menu">
           {menuItem.map((item, i) => (
-            <div className="drawer-item">
+            <div key={i} className="drawer-item">
               <motion.h1
-                key={i}
                 className="cursor-pointer"
                 variants={overVariant}
                 animate={hoverStatus === i ? "hover" : "normal"}
