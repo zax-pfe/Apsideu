@@ -2,7 +2,10 @@
 import { motion } from "framer-motion";
 import { useScroll, MotionValue, useTransform } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
-import "../styles/works.css";
+import "../../styles/works/works.css";
+// import WorkItem from "./WorkItem";
+import WorkItem from "./WorkItem2";
+import { categoriesList } from "@/app/data/categories";
 
 export default function Works() {
   const ref = useRef(null);
@@ -19,6 +22,16 @@ export default function Works() {
       <div className="works-header">
         <h1>works</h1>
         <div className="bar"></div>
+      </div>
+      <div className="workitems-container">
+        {categoriesList.map((category, i) => (
+          <WorkItem
+            key={i}
+            name={category.name}
+            description={category.description}
+            src={category.src}
+          />
+        ))}
       </div>
     </motion.div>
   );

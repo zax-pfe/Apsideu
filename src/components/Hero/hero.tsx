@@ -1,11 +1,17 @@
 "use client";
-import "../styles/hero.css";
+import "../../styles/hero/hero.css";
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
 import { IoIosMenu } from "react-icons/io";
-import { motion } from "framer-motion";
-import { useScroll, MotionValue, useTransform } from "framer-motion";
-import { useState, useEffect, useRef } from "react";
+import Drawer from "./Drawer";
+import {
+  motion,
+  useScroll,
+  MotionValue,
+  useTransform,
+  AnimatePresence,
+} from "framer-motion";
+import { useState, useEffect, useRef, SetStateAction, Dispatch } from "react";
 
 const imageVariant = {
   hidden: {
@@ -19,10 +25,13 @@ const imageVariant = {
 
 interface HeroPorps {
   imgData: StaticImageData;
+  // setActiveDrawer: Dispatch<SetStateAction<boolean>>;
 }
 
 export default function Hero(props: HeroPorps) {
   const ref = useRef(null);
+
+  const [activeDrawer, setActiveDrawer] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -30,6 +39,10 @@ export default function Hero(props: HeroPorps) {
   });
 
   const maximedespiau = useTransform(scrollYProgress, [0, 1], [60, -120]);
+
+  function handleClick() {
+    setActiveDrawer(true);
+  }
 
   return (
     <div className="hero-container" ref={ref}>
@@ -43,14 +56,41 @@ export default function Hero(props: HeroPorps) {
             <div className="bar" />
             <div className="item"> based in brussels</div>
           </div>
-          <div className="header-menu">
+          <motion.div
+            animate={{ opacity: activeDrawer ? 0 : 1 }}
+            className="header-menu"
+            onClick={() => handleClick()}
+          >
             <IoIosMenu size={35} />
-          </div>
+          </motion.div>
         </div>
         <motion.div style={{ y: maximedespiau }} className="footer">
           MAXIME DESPIAU
         </motion.div>
       </div>
+
+      <AnimatePresence>
+        {activeDrawer && (
+          <motion.div
+            initial={{ opacity: 1, x: "100vw" }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 0.8, ease: [0.85, 0, 0.15, 1] },
+            }}
+            exit={{
+              opacity: 1,
+              x: "100vw",
+              transition: { duration: 1, ease: [0.85, 0, 0.15, 1] },
+            }}
+          >
+            <Drawer
+              setActiveDrawer={setActiveDrawer}
+              activeDrawer={activeDrawer}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
