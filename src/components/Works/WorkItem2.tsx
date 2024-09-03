@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { HiOutlineArrowSmRight } from "react-icons/hi";
 import { useState } from "react";
+import Link from "next/link";
 
 interface drawerProps {
   src: StaticImageData;
@@ -82,7 +83,9 @@ export default function WorkItem(props: drawerProps) {
               animate={hoverStatus ? "hover" : "normal"}
               variants={hoverVariant}
             >
-              <h1>discover</h1>
+              <Link href={`/${props.name}`} legacyBehavior>
+                discover
+              </Link>
               <HiOutlineArrowSmRight color="white" scale={20} />
             </motion.div>
           </div>

@@ -2,6 +2,7 @@
 import "../../styles/hero/hero.css";
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
+import { HeroImageList } from "@/app/data/heroImages";
 import { IoIosMenu } from "react-icons/io";
 import Drawer from "./Drawer";
 import {
@@ -16,20 +17,19 @@ import { useState, useEffect, useRef, SetStateAction, Dispatch } from "react";
 const imageVariant = {
   hidden: {
     opacity: 0,
+    size: 0.8,
+    transition: { duration: 0.7, ease: [0.61, 1, 0.88, 1] },
   },
   visible: {
     opacity: 1,
-    transition: { duration: 1, ease: [0.61, 1, 0.88, 1] },
+    size: 1,
+    transition: { duration: 0.7, ease: [0.61, 1, 0.88, 1] },
   },
 };
 
-interface HeroPorps {
-  imgData: StaticImageData;
-  // setActiveDrawer: Dispatch<SetStateAction<boolean>>;
-}
-
-export default function Hero(props: HeroPorps) {
+export default function Hero() {
   const ref = useRef(null);
+  const [activeHero, setActiveHero] = useState(0);
 
   const [activeDrawer, setActiveDrawer] = useState(false);
 
@@ -44,11 +44,38 @@ export default function Hero(props: HeroPorps) {
     setActiveDrawer(true);
   }
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      console.log(`active hero ${activeHero}`);
+      console.log(`HeroImageList.length ${HeroImageList.length}`);
+      setActiveHero((prev) =>
+        prev < HeroImageList.length - 1 ? activeHero + 1 : 0
+      );
+    }, 5000);
+
+    return () => clearInterval(intervalId);
+  }, [activeHero]);
+
   return (
     <div className="hero-container" ref={ref}>
-      <motion.div initial="hidden" animate="visible" variants={imageVariant}>
-        <Image src={props.imgData} alt="background" fill={true}></Image>
-      </motion.div>
+      <div className="hero-image-wrapper">
+        <AnimatePresence mode="sync">
+          <motion.div
+            key={activeHero}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={imageVariant}
+          >
+            <Image
+              src={HeroImageList[activeHero]}
+              alt="background"
+              fill={true}
+            ></Image>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
       <div className="hero-content">
         <div className="header">
           <div className="header-content">

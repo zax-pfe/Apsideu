@@ -1,0 +1,68 @@
+.workpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.workpage-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: end;
+  color: white;
+  padding-right: 5vw;
+  padding-top: 3vh;
+  text-transform: uppercase;
+  font-size: 1.5vw;
+  font-weight: 500;
+  /* position: fixed;
+  top: 0; */
+}
+
+.test {
+  border: solid 1px white;
+}
+
+.workpage-content {
+  display: flex;
+}
+.workpage-navbar {
+  height: 100vh;
+  width: 5vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3vh 0px 3vh 0px;
+  gap: 2vh;
+}
+
+.navbar-bar {
+  border-left: solid 2px white;
+}
+
+.navbar-bar.small {
+  height: 10vh;
+}
+
+.navbar-text {
+  transform: rotate(-90deg);
+  color: white;
+  text-transform: uppercase;
+  width: 15vh;
+  margin: 5vh 0px 5vh 0px;
+  white-space: nowrap;
+}
+
+.navbar-bar.large {
+  height: 100%;
+}
+
+.workpage-images {
+  width: 100vw;
+  height: 300vh;
+}
