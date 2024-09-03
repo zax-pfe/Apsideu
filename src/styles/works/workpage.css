@@ -17,8 +17,9 @@
   text-transform: uppercase;
   font-size: 1.5vw;
   font-weight: 500;
-  /* position: fixed;
-  top: 0; */
+  position: fixed;
+  top: 0;
+  /* background: ; */
 }
 
 .test {
@@ -50,12 +51,12 @@
 }
 
 .navbar-text {
-  transform: rotate(-90deg);
   color: white;
   text-transform: uppercase;
-  width: 15vh;
-  margin: 5vh 0px 5vh 0px;
-  white-space: nowrap;
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  width: 5vw;
 }
 
 .navbar-bar.large {
@@ -64,5 +65,50 @@
 
 .workpage-images {
   width: 100vw;
-  height: 300vh;
+  /* height: 300vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15vh 0px 15vh 0px;
+  gap: 20vh;
+}
+
+.workpage-image-container {
+  display: flex;
+  height: 70vh;
+  width: 70vw;
+}
+.workpage-image-4overflow {
+  width: 50vw;
+  height: 70vh;
+  overflow: hidden;
+}
+.workpage-image {
+  cursor: pointer;
+  position: relative;
+  width: 50vw;
+  height: 70vh;
+}
+
+.workpage-description {
+  display: flex;
+  width: 20vw;
+  height: 70vh;
+  justify-content: end;
+  align-items: end;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1vw;
+  font-weight: 400;
+}
+
+.workpage-image img {
+  object-fit: cover;
 }
