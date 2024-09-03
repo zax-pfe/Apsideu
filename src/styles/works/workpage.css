@@ -71,30 +71,30 @@
   align-items: center;
   justify-content: center;
   margin: 15vh 0px 15vh 0px;
-  gap: 20vh;
+  gap: 10vh;
 }
 
 .workpage-image-container {
   display: flex;
-  height: 70vh;
-  width: 70vw;
+  height: 50vh;
+  width: 50vw;
 }
 .workpage-image-4overflow {
-  width: 50vw;
-  height: 70vh;
+  width: 35vw;
+  height: 50vh;
   overflow: hidden;
 }
 .workpage-image {
   cursor: pointer;
   position: relative;
-  width: 50vw;
-  height: 70vh;
+  width: 35vw;
+  height: 50vh;
 }
 
 .workpage-description {
   display: flex;
-  width: 20vw;
-  height: 70vh;
+  width: 15vw;
+  height: 50vh;
   justify-content: end;
   align-items: end;
 }
@@ -105,10 +105,20 @@
   align-items: flex-start;
   color: white;
   text-transform: uppercase;
-  font-size: 1vw;
+  font-size: 0.8vw;
   font-weight: 400;
 }
 
 .workpage-image img {
   object-fit: cover;
+}
+
+.modal-overlay {
+  background-color: black;
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 15;
 }

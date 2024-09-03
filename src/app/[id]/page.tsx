@@ -4,14 +4,32 @@ import VerticalText from "@/components/Works/VerticalText";
 import Link from "next/link";
 import { nuitImages } from "../data/nuit";
 import Image from "next/image";
-import { imageConfigDefault } from "next/dist/shared/lib/image-config";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import Carousel from "@/components/Works/Carousel";
 
 interface WorksPageProps {
   params: {
     id: string;
   };
 }
+
+const modalVariant = {
+  visible: {
+    opacity: 1,
+    // y: 0,
+    transition: {
+      duration: 0.2,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    // y: 100,
+    transition: {
+      duration: 0.2,
+    },
+  },
+};
 
 const ImageVariants = {
   visible: {
@@ -41,9 +59,29 @@ const WrapperVariants = {
 
 export default function Page(props: WorksPageProps) {
   const workpage_id = props.params.id;
+  const [activeModal, setActiveModal] = useState(false);
+
+  function openModal() {
+    setActiveModal(!activeModal);
+    console.log(activeModal);
+  }
 
   return (
     <div className="workpage">
+      <AnimatePresence>
+        {activeModal && (
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={modalVariant}
+            className="modal-overlay"
+          >
+            <Carousel setActiveModal={setActiveModal} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="workpage-header">
         <h1>{workpage_id}</h1>
       </div>
@@ -67,7 +105,11 @@ export default function Page(props: WorksPageProps) {
               key={i}
               className="workpage-image-container"
             >
-              <motion.div variants={ImageVariants} className="workpage-image">
+              <motion.div
+                variants={ImageVariants}
+                className="workpage-image"
+                onClick={() => openModal()}
+              >
                 <Image src={item.src} alt={item.name} fill={true} />
               </motion.div>
               <motion.div

@@ -51,7 +51,7 @@ export default function Hero() {
       setActiveHero((prev) =>
         prev < HeroImageList.length - 1 ? activeHero + 1 : 0
       );
-    }, 5000);
+    }, 4000);
 
     return () => clearInterval(intervalId);
   }, [activeHero]);
