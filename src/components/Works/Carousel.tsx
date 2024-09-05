@@ -1,6 +1,6 @@
 import "../../styles/works/carousel.css";
 import { Dispatch, SetStateAction, useEffect } from "react";
-import { IoMdClose } from "react-icons/io";
+import { IoMdClose, IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import Image from "next/image";
 import { nuitImages } from "@/app/data/nuit";
 
@@ -28,20 +28,34 @@ export default function Carousel(props: CarouselProps) {
     <div className="carousel-container">
       <div className="carousel-header">
         <IoMdClose
-          className="cursor-pointer"
+          className="carousel-button"
           onClick={() => props.setActiveModal(0)}
           color="white"
           size={35}
         />
       </div>
       <div className="carousel-content">
-        <div className="arrow-container"></div>
+        <div className="arrow-container justify-end">
+          <IoIosArrowBack
+            className="carousel-button"
+            onClick={() => props.setActiveModal(0)}
+            color="white"
+            size={45}
+          />
+        </div>
         <div className="image-container">
           {imageData?.src && (
             <Image src={imageData.src} alt={imageData.name} fill={true} />
           )}
         </div>
-        <div className="arrow-container"></div>
+        <div className="arrow-container">
+          <IoIosArrowForward
+            className="carousel-button"
+            onClick={() => props.setActiveModal(0)}
+            color="white"
+            size={45}
+          />
+        </div>
       </div>
       <div className="carousel-footer"></div>
     </div>
