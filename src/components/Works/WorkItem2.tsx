@@ -85,7 +85,9 @@ export default function WorkItem(props: drawerProps) {
               animate={hoverStatus ? "hover" : "normal"}
               variants={hoverVariant}
             >
-              <Link href={`/${props.name}`}>discover</Link>
+              <Link href={`/${props.name}`} legacyBehavior={false}>
+                discover
+              </Link>
               <HiOutlineArrowSmRight color="white" scale={20} />
             </motion.div>
           </div>

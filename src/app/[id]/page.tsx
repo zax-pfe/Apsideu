@@ -1,5 +1,5 @@
 "use client";
-import "../../styles/works/workpage.css";
+import "../../styles/works/workpagegallery.css";
 import VerticalText from "@/components/Works/VerticalText";
 import Link from "next/link";
 import { nuitImages } from "../data/nuit";
@@ -7,6 +7,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Carousel from "@/components/Works/Carousel";
+import WorkPageItem from "@/components/Works/WorkPageItem";
 
 interface WorksPageProps {
   params: {
@@ -59,17 +60,12 @@ const WrapperVariants = {
 
 export default function Page(props: WorksPageProps) {
   const workpage_id = props.params.id;
-  const [activeModal, setActiveModal] = useState(false);
-
-  function openModal() {
-    setActiveModal(!activeModal);
-    console.log(activeModal);
-  }
+  const [activeModal, setActiveModal] = useState(0);
 
   return (
     <div className="workpage">
       <AnimatePresence>
-        {activeModal && (
+        {activeModal !== 0 && (
           <motion.div
             initial="hidden"
             animate="visible"
@@ -77,7 +73,7 @@ export default function Page(props: WorksPageProps) {
             variants={modalVariant}
             className="modal-overlay"
           >
-            <Carousel setActiveModal={setActiveModal} />
+            <Carousel setActiveModal={setActiveModal} pictureId={activeModal} />
           </motion.div>
         )}
       </AnimatePresence>
@@ -88,7 +84,7 @@ export default function Page(props: WorksPageProps) {
       <div className="workpage-content">
         <div className="workpage-navbar">
           <div className="navbar-bar small"></div>
-          <Link legacyBehavior={true} href="/">
+          <Link legacyBehavior={false} href="/">
             <div className="navbar-text">
               <VerticalText>back to home</VerticalText>
             </div>
@@ -97,31 +93,14 @@ export default function Page(props: WorksPageProps) {
         </div>
         <div className="workpage-images">
           {nuitImages.map((item, i) => (
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              variants={WrapperVariants}
-              viewport={{ once: true, amount: 0.3 }}
+            <WorkPageItem
               key={i}
-              className="workpage-image-container"
-            >
-              <motion.div
-                variants={ImageVariants}
-                className="workpage-image"
-                onClick={() => openModal()}
-              >
-                <Image src={item.src} alt={item.name} fill={true} />
-              </motion.div>
-              <motion.div
-                variants={ImageVariants}
-                className="workpage-description"
-              >
-                <div className="description-container">
-                  <p>Model: {item.model}</p>
-                  <p>Name: {item.name}</p>
-                </div>
-              </motion.div>
-            </motion.div>
+              id={i}
+              src={item.src}
+              name={item.name}
+              model={item.model}
+              setActiveModal={setActiveModal}
+            />
           ))}
         </div>
       </div>

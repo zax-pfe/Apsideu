@@ -1,0 +1,92 @@
+.workpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.workpage-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: end;
+  color: white;
+  padding-right: 5vw;
+  padding-top: 3vh;
+  text-transform: uppercase;
+  font-size: 1.5vw;
+  font-weight: 500;
+  position: fixed;
+  top: 0;
+  /* background: ; */
+}
+
+.test {
+  border: solid 1px white;
+}
+
+.workpage-content {
+  display: flex;
+}
+.workpage-navbar {
+  height: 100vh;
+  width: 5vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3vh 0px 3vh 0px;
+  gap: 2vh;
+}
+
+.navbar-bar {
+  border-left: solid 2px white;
+}
+
+.navbar-bar.small {
+  height: 10vh;
+}
+
+.navbar-text {
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  width: 5vw;
+}
+
+.navbar-bar.large {
+  height: 100%;
+}
+
+.workpage-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10vh 9vw 10vh 5vw;
+  gap: 50px;
+  /* row-gap: 10px; */
+}
+
+.workpages-item {
+  height: 60vh;
+  width: 25vw;
+}
+
+.workpage-image img {
+  object-fit: cover;
+}
+
+.modal-overlay {
+  background-color: black;
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 15;
+}

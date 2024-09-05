@@ -1,0 +1,35 @@
+.workpages-item {
+  height: 60vh;
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.workpage-item-image-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.workpage-item-description-container {
+  display: flex;
+  height: 0%;
+  width: 100%;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding-left: 1vw;
+}
+
+.workpage-item-description-container p {
+  color: white;
+  text-transform: uppercase;
+}
+
+.workpage-item-image-container img {
+  object-fit: cover;
+}
+
+.test {
+  border: solid 1px white;
+}
