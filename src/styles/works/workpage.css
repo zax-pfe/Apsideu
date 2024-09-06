@@ -111,6 +111,7 @@
 
 .workpage-image img {
   object-fit: cover;
+  /* border-radius: 10px; */
 }
 
 .modal-overlay {
