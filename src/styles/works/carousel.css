@@ -45,20 +45,24 @@
   object-fit: contain;
 }
 
+.carousel-button {
+  cursor: pointer;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 100%;
+  box-sizing: border-box;
+  border: solid transparent 1px;
+}
+
+.carousel-button:hover {
+  border: solid rgb(79, 79, 79) 1px;
+}
+
 .carousel-footer {
   height: 5vh;
+  width: 100%;
+  display: flex;
 }
 
 .test {
   border: solid 1px white;
-}
-
-.carousel-button {
-  cursor: pointer;
-  transition: box-shadow 0.3s ease;
-  border-radius: 100%;
-}
-
-.carousel-button:hover {
-  box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.8);
 }

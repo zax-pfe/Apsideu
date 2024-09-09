@@ -21,7 +21,7 @@ export default function Home() {
       <Hero />
 
       <Works />
-      <div className="section" />
+      {/* <div className="section" /> */}
     </div>
   );
 }

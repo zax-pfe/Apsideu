@@ -26,8 +26,9 @@ const WorkPageItemVariants = {
 
 export default function WorkPageItem(props: WorkPageItemProps) {
   function handleClick() {
-    props.setActiveModal(props.id + 1);
+    props.setActiveModal(props.id);
   }
+
   return (
     <motion.div
       initial="hidden"

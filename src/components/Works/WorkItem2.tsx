@@ -51,11 +51,7 @@ const hoverVariant = {
 export default function WorkItem(props: drawerProps) {
   const [hoverStatus, setHoverStatus] = useState(false);
   return (
-    <motion.div
-      onHoverStart={() => setHoverStatus(true)}
-      onHoverEnd={() => setHoverStatus(false)}
-      className="item-container"
-    >
+    <div className="item-container">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -84,8 +80,10 @@ export default function WorkItem(props: drawerProps) {
               className="flex items-center"
               animate={hoverStatus ? "hover" : "normal"}
               variants={hoverVariant}
+              onHoverStart={() => setHoverStatus(true)}
+              onHoverEnd={() => setHoverStatus(false)}
             >
-              <Link href={`/${props.name}`} legacyBehavior={false}>
+              <Link href={`/${props.name}`} legacyBehavior={true}>
                 discover
               </Link>
               <HiOutlineArrowSmRight color="white" scale={20} />
@@ -93,6 +91,6 @@ export default function WorkItem(props: drawerProps) {
           </div>
         </motion.div>
       </div>
-    </motion.div>
+    </div>
   );
 }

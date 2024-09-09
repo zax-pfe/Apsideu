@@ -60,12 +60,12 @@ const WrapperVariants = {
 
 export default function Page(props: WorksPageProps) {
   const workpage_id = props.params.id;
-  const [activeModal, setActiveModal] = useState(0);
+  const [activeModal, setActiveModal] = useState(-1);
 
   return (
     <div className="workpage">
       <AnimatePresence>
-        {activeModal !== 0 && (
+        {activeModal !== -1 && (
           <motion.div
             initial="hidden"
             animate="visible"
@@ -73,7 +73,10 @@ export default function Page(props: WorksPageProps) {
             variants={modalVariant}
             className="modal-overlay"
           >
-            <Carousel setActiveModal={setActiveModal} pictureId={activeModal} />
+            <Carousel
+              setActiveModal={setActiveModal}
+              activeModal={activeModal}
+            />
           </motion.div>
         )}
       </AnimatePresence>
@@ -84,7 +87,7 @@ export default function Page(props: WorksPageProps) {
       <div className="workpage-content">
         <div className="workpage-navbar">
           <div className="navbar-bar small"></div>
-          <Link legacyBehavior={false} href="/">
+          <Link href="/">
             <div className="navbar-text">
               <VerticalText>back to home</VerticalText>
             </div>

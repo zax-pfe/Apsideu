@@ -1,0 +1,23 @@
+.dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: #515151;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dot.active {
+  background-color: #dfdede;
+}
+
+.thumbnail-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5vw;
+}
+
+.test {
+  border: solid white 1px;
+}
