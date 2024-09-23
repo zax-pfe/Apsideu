@@ -42,6 +42,7 @@ export default function WorkPageItem(props: WorkPageItemProps) {
         onClick={() => handleClick()}
       >
         <Image src={props.src} alt={props.name} fill={true} />
+        <div className="voile-blanc" />
       </div>
     </motion.div>
   );

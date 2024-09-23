@@ -1,0 +1,68 @@
+.achievement-element {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.achievement-element-image-container {
+  position: relative;
+  display: flex;
+  height: 85%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* .achievement-element-image-container img {
+  object-fit: cover;
+} */
+
+.achievement-image {
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.achievement-element:hover .achievement-image {
+  transform: scale(1.02);
+}
+
+.voile-blanc {
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.voile-blanc:hover {
+  opacity: 0.1;
+}
+
+.achievement-element-footer-container {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15%;
+  width: 100%;
+  padding-left: 0vw;
+  padding-right: 2vw;
+}
+
+.achievement-element-text-container {
+  display: flex;
+  width: 5vw;
+  font-size: 2vw;
+  text-transform: uppercase;
+  margin-left: 2vw;
+}
+.achievement-element-footer-container span {
+  width: 100%;
+  border: solid white 1px;
+}
+
+.test {
+  border: solid white 1px;
+}

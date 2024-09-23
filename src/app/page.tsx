@@ -5,6 +5,7 @@ import "../styles/page.css";
 import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
 import Works from "@/components/Works/Works";
+import Achievements from "@/components/Achievements/Achievement";
 
 export default function Home() {
   useEffect(() => {
@@ -21,6 +22,7 @@ export default function Home() {
       <Hero />
 
       <Works />
+      <Achievements />
       {/* <div className="section" /> */}
     </div>
   );

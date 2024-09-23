@@ -3,7 +3,7 @@ import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { IoMdClose, IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import Image, { StaticImageData } from "next/image";
 import { nuitImages } from "@/app/data/nuit";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import CarouselThumbnail from "./CarouselThumbnail";
 
 interface CarouselProps {
@@ -17,12 +17,21 @@ type ImageType = {
   model: string;
 };
 
-const ArrowVariant = {
-  hover: {
-    size: 1.2,
+const imageVariant = {
+  hidden: {
+    opacity: 0,
+    // x: 50,
+    transiaiton: {
+      duration: 0.4,
+    },
   },
-  normal: {
-    size: 1,
+
+  visible: {
+    opacity: 1,
+    // x: 0,
+    transition: {
+      duration: 0.4,
+    },
   },
 };
 
@@ -77,24 +86,28 @@ export default function Carousel(props: CarouselProps) {
         />
       </div>
       <div className="carousel-content">
-        <motion.div
-          initial="normal"
-          whileHover="hover"
-          variants={ArrowVariant}
-          className="arrow-container justify-end"
-        >
+        <div className="arrow-container justify-end">
           <IoIosArrowBack
             className="carousel-button"
             onClick={() => handlePrevClick(props.activeModal)}
             color="white"
             size={45}
           />
-        </motion.div>
-        <div className="image-container">
-          {imageData?.src && (
-            <Image src={imageData.src} alt={imageData.name} fill={true} />
-          )}
         </div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={props.activeModal}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={imageVariant}
+            className="image-container"
+          >
+            {imageData?.src && (
+              <Image src={imageData.src} alt={imageData.name} fill={true} />
+            )}
+          </motion.div>
+        </AnimatePresence>
         <div className="arrow-container">
           <IoIosArrowForward
             className="carousel-button"
