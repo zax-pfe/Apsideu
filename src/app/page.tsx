@@ -8,7 +8,7 @@ import Works from "@/components/Works/Works";
 import Achievements from "@/components/Achievements/Achievement";
 import AchievementsWrapper from "@/components/Achievements/achievements_wrapper";
 // import About from "@/components/about/About";
-import AboutWrapper from "@/components/about/about_wrapper";
+import AboutWrapper from "@/components/about/About_wrapper";
 import { motion } from "framer-motion";
 
 const appear = {
