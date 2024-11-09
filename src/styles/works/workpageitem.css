@@ -3,12 +3,14 @@
   width: 25vw;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .workpage-item-image-container {
   position: relative;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 .workpage-item-description-container {
@@ -28,6 +30,11 @@
 
 .workpage-item-image-container img {
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.workpage-item-image-container:hover img {
+  transform: scale(1.02);
 }
 
 .test {
@@ -39,7 +46,7 @@
   width: 100%;
   position: absolute;
   background-color: white;
-  z-index: 15;
+  z-index: 5;
   opacity: 0;
   transition: opacity 0.3s ease;
 }

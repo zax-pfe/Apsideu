@@ -1,7 +1,6 @@
 "use client";
 import { StaticImageData } from "next/image";
 import "../../styles/achievements/AchievementElement.css";
-import styles from "./achievementElement.module.css";
 
 interface AchievementElementProps {
   src: StaticImageData;
@@ -10,12 +9,12 @@ interface AchievementElementProps {
 
 export default function AchievementElement(props: AchievementElementProps) {
   return (
-    <div className={styles.achievementElement}>
+    <div>
       <div
         className="achievement-element-image-container"
         // style={{ height: "55vh" }}
       ></div>
-      <div className="achievement-element-footer-container test">
+      <div className="achievement-element-footer-container">
         <span />
         <p>{props.name}</p>
       </div>

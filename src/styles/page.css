@@ -2,6 +2,14 @@
   height: 100vh;
 }
 
+.black_screen {
+  background-color: black;
+  /* position: absolute; */
+  height: 100vh;
+  width: 100vw;
+  z-index: 150;
+}
+
 .page {
   display: flex;
   flex-direction: column;
@@ -9,4 +17,5 @@
   justify-content: center; */
   /* position: relative; */
   gap: 0px;
+  /* opacity: 0; */
 }

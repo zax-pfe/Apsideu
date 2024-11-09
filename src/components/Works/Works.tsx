@@ -4,7 +4,7 @@ import { useScroll, MotionValue, useTransform } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import "../../styles/works/works.css";
 // import WorkItem from "./WorkItem";
-import WorkItem from "./WorkItem2";
+import WorkItem from "./WorkItem";
 import { categoriesList } from "@/app/data/categories";
 
 export default function Works() {
@@ -20,7 +20,7 @@ export default function Works() {
   return (
     <motion.div style={{ y: works }} className="works-container" ref={ref}>
       <div className="works-header">
-        <h1>works</h1>
+        <h1>Personal achievements</h1>
         <div className="bar"></div>
       </div>
       <div className="workitems-container">

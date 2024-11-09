@@ -12,31 +12,31 @@ export const achievementslist = [
     src: HomeImageDorian,
   },
   {
-    name: "nuit",
+    name: "sportmotor",
     src: HomeImageMiss,
   },
   {
-    name: "nuit",
+    name: "motorsport",
     src: nuit1,
   },
   {
     name: "nuit",
     src: nuit2,
   },
-  {
-    name: "nuit",
-    src: nuit3,
-  },
-  {
-    name: "nuit",
-    src: nuit4,
-  },
-  {
-    name: "nuit",
-    src: nuit5,
-  },
-  {
-    name: "nuit",
-    src: nuit1,
-  },
+  // {
+  //   name: "nuit",
+  //   src: nuit3,
+  // },
+  // {
+  //   name: "nuit",
+  //   src: nuit4,
+  // },
+  // {
+  //   name: "nuit",
+  //   src: nuit5,
+  // },
+  // {
+  //   name: "nuit",
+  //   src: nuit1,
+  // },
 ];

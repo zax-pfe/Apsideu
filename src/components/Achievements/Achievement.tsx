@@ -13,7 +13,7 @@ export default function Achievements() {
   const { scrollYProgress } = useScroll({
     target: ref,
   });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-70%"]);
+  const x = useTransform(scrollYProgress, [0, 0.8], ["0%", "-60%"]);
 
   return (
     <div className="achievements-container" ref={ref}>
@@ -24,7 +24,7 @@ export default function Achievements() {
 
         <div className="content-container">
           <div className="pre-text">
-            <h1>Personal achievements</h1>
+            <h1>works</h1>
           </div>
           <motion.div className="scroller-container" style={{ x: x }}>
             {achievementslist.map((elemnt, index) => (

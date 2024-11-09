@@ -1,12 +1,15 @@
 .achievements-container {
-  height: 300vh;
+  height: 400vh;
   /* overflow: visible; */
+  display: flex;
+  position: relative;
 }
 
 .sticky-container {
   position: sticky;
   display: flex;
-  top: 0;
+  /* padding-left: 5vw; */
+  top: 400px;
   height: 100vh;
 }
 
@@ -39,13 +42,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 10vh;
+  padding-top: 4vh;
   text-transform: uppercase;
 }
 
 .sticky-container h1 {
   color: white;
-  font-size: 3vw;
+  font-size: 4vw;
+  font-weight: 500;
 }
 
 .scroller-container {

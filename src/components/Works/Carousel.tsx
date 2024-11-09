@@ -78,21 +78,25 @@ export default function Carousel(props: CarouselProps) {
   return (
     <div className="carousel-container">
       <div className="carousel-header">
-        <IoMdClose
-          className="carousel-button"
-          onClick={() => props.setActiveModal(-1)}
-          color="white"
-          size={35}
-        />
+        <div className="button-container">
+          <IoMdClose
+            className="carousel-button"
+            onClick={() => props.setActiveModal(-1)}
+            color="white"
+            size={35}
+          />
+        </div>
       </div>
       <div className="carousel-content">
         <div className="arrow-container justify-end">
-          <IoIosArrowBack
-            className="carousel-button"
-            onClick={() => handlePrevClick(props.activeModal)}
-            color="white"
-            size={45}
-          />
+          <div className="button-container">
+            <IoIosArrowBack
+              className="carousel-button"
+              onClick={() => handlePrevClick(props.activeModal)}
+              color="white"
+              size={45}
+            />
+          </div>
         </div>
         <AnimatePresence mode="wait">
           <motion.div
@@ -109,12 +113,14 @@ export default function Carousel(props: CarouselProps) {
           </motion.div>
         </AnimatePresence>
         <div className="arrow-container">
-          <IoIosArrowForward
-            className="carousel-button"
-            onClick={() => handleNextClick(props.activeModal)}
-            color="white"
-            size={45}
-          />
+          <div className="button-container">
+            <IoIosArrowForward
+              className="carousel-button"
+              onClick={() => handleNextClick(props.activeModal)}
+              color="white"
+              size={45}
+            />
+          </div>
         </div>
       </div>
       <div className="carousel-footer">

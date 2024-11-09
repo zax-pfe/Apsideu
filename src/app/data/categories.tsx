@@ -21,4 +21,10 @@ export const categoriesList = [
     description:
       " volutpat nisi. Fusce vulputate neque quis risus lobortis lacinia. Donec ornare mattis est, eget finibus nisi tempor nec. In hac habitasse platea dictumst.",
   },
+  {
+    name: "blabla",
+    src: HomeImageDorian,
+    description:
+      " volutpat nisi. Fusce vulputate neque quis risus lobortis lacinia. Donec ornare mattis est, eget finibus nisi tempor nec. In hac habitasse platea dictumst.",
+  },
 ];

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 65vh;
+  height: 60vh;
   width: 80vw;
   padding-bottom: 15vh;
   border-bottom: 1px solid white;
@@ -16,7 +16,7 @@
   align-items: center;
 }
 
-.image-container {
+.image-container-workitem {
   width: 40vw;
   height: 50vh;
   position: relative;
@@ -24,7 +24,7 @@
 
 .item-image img {
   object-fit: cover;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 .item-description {

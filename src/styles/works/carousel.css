@@ -33,6 +33,37 @@
   /* justify-content: center; */
   height: 100%;
   width: 10vw;
+  position: relative;
+}
+
+.carousel-button {
+  cursor: pointer;
+  box-sizing: border-box;
+  border: solid transparent 1px;
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+}
+
+.carousel-button:hover {
+  opacity: 1;
+}
+
+.button-container {
+  position: relative;
+  display: flex;
+}
+
+.element-for-hover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+}
+
+.element-for-hover:hover {
+  opacity: 0;
 }
 
 .image-container {
@@ -43,18 +74,6 @@
 
 .image-container img {
   object-fit: contain;
-}
-
-.carousel-button {
-  cursor: pointer;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 100%;
-  box-sizing: border-box;
-  border: solid transparent 1px;
-}
-
-.carousel-button:hover {
-  border: solid rgb(79, 79, 79) 1px;
 }
 
 .carousel-footer {
