@@ -10,6 +10,7 @@ import AchievementsWrapper from "@/components/Achievements/achievements_wrapper"
 // import About from "@/components/about/About";
 import AboutWrapper from "@/components/about/About_wrapper";
 import { motion } from "framer-motion";
+import Wrapper1 from "@/components/Wrapper/Wrapper1";
 
 const appear = {
   hidden: {
@@ -40,9 +41,7 @@ export default function Home() {
       variants={appear}
     >
       <Hero />
-      <Works />
-      <AchievementsWrapper />
-      <AboutWrapper />
+      <Wrapper1 />
     </motion.div>
   );
 }

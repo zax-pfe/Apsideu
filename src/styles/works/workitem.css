@@ -3,21 +3,21 @@
   align-items: center;
   justify-content: center;
   height: 60vh;
-  width: 80vw;
-  padding-bottom: 15vh;
-  border-bottom: 1px solid white;
+  width: 100vw;
+  /* padding-bottom: 15vh; */
+  /* border-bottom: 1px solid white; */
 }
 
 .item-image {
-  width: 50vw;
-  height: 60vh;
+  /* width: 70vw;
+  height: 60vh; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .image-container-workitem {
-  width: 40vw;
+  width: 60vw;
   height: 50vh;
   position: relative;
 }

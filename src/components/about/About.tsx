@@ -1,6 +1,6 @@
 import "../../styles/about/about.css";
 import Image from "next/image";
-import AboutImage from "../../../public/images/about/_MG_0870.jpg";
+import AboutImage from "../../../public/images/about/contact_compressed.png";
 
 export default function About() {
   return (

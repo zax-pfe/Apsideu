@@ -1,14 +1,13 @@
 .works-container {
-  /* height: 100vh; */
   width: 100vw;
   background-color: black;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   font-size: 5vw;
   color: white;
   flex-direction: column;
   font-weight: 500;
+  background-color: rgb(9, 9, 9);
 }
 
 .works-header {
@@ -16,10 +15,10 @@
   display: flex;
   text-transform: uppercase;
   font-size: 4vw;
-  margin-top: 5vh;
+  margin-top: 3vh;
   padding: 0px 7vw 0px 5vw;
   gap: 4vw;
-  margin-bottom: 15vh;
+  margin-bottom: 10vh;
 }
 
 .bar {
@@ -33,5 +32,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 15vh;
+  gap: 5vh;
+}
+
+.test {
+  border: solid white 1px;
 }

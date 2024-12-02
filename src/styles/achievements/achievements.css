@@ -1,15 +1,17 @@
 .achievements-container {
-  height: 400vh;
+  height: 350vh;
   /* overflow: visible; */
   display: flex;
-  position: relative;
+  /* position: relative; */
+  background-color: rgb(9, 9, 9);
+  z-index: 5;
 }
 
 .sticky-container {
   position: sticky;
   display: flex;
   /* padding-left: 5vw; */
-  top: 400px;
+  top: 500px;
   height: 100vh;
 }
 
@@ -22,7 +24,7 @@
   justify-content: center;
   padding-top: 7vh;
   padding-bottom: 7vh;
-  background-color: black;
+  background-color: rgb(9, 9, 9);
   z-index: 15;
 }
 
