@@ -8,18 +8,18 @@ import Works from "@/components/Works/Works";
 import Achievements from "@/components/Achievements/Achievement";
 import AchievementsWrapper from "@/components/Achievements/achievements_wrapper";
 // import About from "@/components/about/About";
-import AboutWrapper from "@/components/about/About_wrapper";
 import { motion } from "framer-motion";
 import Wrapper1 from "@/components/Wrapper/Wrapper1";
+import Marquee from "@/components/contact/marquee";
 
 const appear = {
   hidden: {
     opacity: 0,
-    transition: { duration: 0.7 },
+    transition: { duration: 2, ease: [0.16, 1, 0.3, 1] },
   },
   visible: {
     opacity: 1,
-    transition: { duration: 0.7 },
+    transition: { duration: 2, ease: [0.16, 1, 0.3, 1] },
   },
 };
 
@@ -42,6 +42,9 @@ export default function Home() {
     >
       <Hero />
       <Wrapper1 />
+      <div className="footer-page">
+        <Marquee />
+      </div>
     </motion.div>
   );
 }

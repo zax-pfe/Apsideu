@@ -1,0 +1,24 @@
+.contact {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  color: white;
+  font-size: 2vw;
+  text-transform: uppercase;
+  z-index: 20;
+  /* position: absolute; */
+  height: 50vh;
+  width: 100vw;
+}
+
+.test {
+  border: solid white 1px;
+}
+
+.contact-container {
+  /* position: relative; */
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  /* transform: translateY(-500px); */
+}

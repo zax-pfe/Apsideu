@@ -17,6 +17,7 @@
   position: relative;
   height: 150vh;
   width: 100vw;
+  background-color: black;
 }
 
 .about-image-wrapper img {
@@ -61,17 +62,26 @@
 }
 
 .about-content {
-  margin-top: 15vh;
+  margin-top: 25vh;
   display: flex;
   flex-direction: column;
   width: 50vw;
-  padding: 30px;
+  padding: 30px 10vw 0px 0px;
+  z-index: 15;
 }
 
 .about-content h1 {
   text-transform: uppercase;
-  font-size: 10vw;
-  font-weight: 400;
+  font-size: 3vw;
+  font-weight: 500;
+}
+
+.about-content p {
+  text-transform: uppercase;
+  font-size: 1.5vw;
+  font-weight: 300;
+  text-align: justify;
+  padding: 2vh 0px 0px 2vw;
 }
 
 .test {

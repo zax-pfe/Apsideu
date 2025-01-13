@@ -11,7 +11,7 @@ export default function Wrapper2() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 1.4", "start start"],
+    offset: ["start 1", "start start"],
   });
   const y_wrapper_1 = useTransform(scrollYProgress, [0, 1], [0, -250]);
 

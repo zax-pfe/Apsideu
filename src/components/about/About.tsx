@@ -13,12 +13,15 @@ export default function About() {
           </div>
         </div>
         <div className="about-wrapper">
-          <div className="about-content test">
+          <div className="about-content">
             <h1>Name</h1>
             <p>
-              s harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio,
-              eaque rerum! Provident similique accusantium nemo autem.
-              Veritatisobcaecati tenetur iure eius earum ut molestias archit
+              As harum quisquam eius sed odit fugiat iusto fuga
+              praesentiumoptio, eaque rerum! Provident similique accusantium
+              nemo autem. Veritatisobcaecati tenetur iure eius earum ut
+              molestias archit. harum quisquam eius sed odit fugiat iusto fuga
+              praesentiumoptio, eaque rerum! Provident similique accusantium
+              nemo autem. my car is the best car, motorsport sportmotor
             </p>
           </div>
         </div>
