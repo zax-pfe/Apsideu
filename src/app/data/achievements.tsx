@@ -1,42 +1,18 @@
-import HomeImageDorian from "../../../public/images/catalogue/Nuit/heroImage.jpg";
-import nuit1 from "../../../public/images/catalogue/Nuit/Amelie-5131.jpg";
-import nuit2 from "../../../public/images/catalogue/Nuit/Amelie-5201.jpg";
-import nuit3 from "../../../public/images/catalogue/Nuit/DorianSdB-4432.jpg";
-import nuit4 from "../../../public/images/catalogue/Nuit/DorianSdB-4708.jpg";
-import nuit5 from "../../../public/images/catalogue/Nuit/Lille-by-night-4042.jpg";
-import HomeImageMiss from "../../../public/images/home/HomeImage1.jpg";
+import mouvement_main from "../../../public/images/achievement/Mouvement/Photo pour effet/Dorian Tennis-6947.jpg";
+import nuit_main from "../../../public/images/achievement/Nuit/Photo pour Effet/SpicyBoi-5269.jpg";
+import reverie_main from "../../../public/images/achievement/Reverie/Photo pour effet/Shooting astrologie-6108.jpg";
 
 export const achievementslist = [
   {
-    name: "nuit",
-    src: HomeImageDorian,
+    name: "Nuit",
+    src: nuit_main,
   },
   {
-    name: "sportmotor",
-    src: HomeImageMiss,
+    name: "Reverie",
+    src: reverie_main,
   },
   {
-    name: "motorsport",
-    src: nuit1,
+    name: "Mouvement",
+    src: mouvement_main,
   },
-  {
-    name: "nuit",
-    src: nuit2,
-  },
-  // {
-  //   name: "nuit",
-  //   src: nuit3,
-  // },
-  // {
-  //   name: "nuit",
-  //   src: nuit4,
-  // },
-  // {
-  //   name: "nuit",
-  //   src: nuit5,
-  // },
-  // {
-  //   name: "nuit",
-  //   src: nuit1,
-  // },
 ];

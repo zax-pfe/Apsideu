@@ -1,6 +1,5 @@
 "use client";
-import Achievements from "../Achievements/Achievement";
-import About from "../about/About";
+import Achievements from "../achievements/Achievement";
 import { useState, useEffect, useRef } from "react";
 import { useScroll, MotionValue, useTransform } from "framer-motion";
 import { motion } from "framer-motion";

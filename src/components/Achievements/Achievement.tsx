@@ -24,7 +24,7 @@ export default function Achievements() {
 
         <div className="content-container">
           <div className="pre-text">
-            <h1>works</h1>
+            <h1>Achievement</h1>
           </div>
           <motion.div className="scroller-container" style={{ x: x }}>
             {achievementslist.map((elemnt, index) => (

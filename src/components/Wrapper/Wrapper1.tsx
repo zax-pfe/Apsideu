@@ -1,7 +1,6 @@
 "use client";
-import Achievements from "../Achievements/Achievement";
+
 import Works from "../Works/Works";
-import About from "../about/About";
 import Wrapper2 from "./Wrapper2";
 import "../../styles/wrappers/wrapper.css";
 import { useState, useEffect, useRef } from "react";

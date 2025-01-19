@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import "../../styles/works/works.css";
 // import WorkItem from "./WorkItem";
 import WorkItem from "./WorkItem";
-import { categoriesList } from "@/app/data/categories";
+import { workslist } from "@/app/data/works";
 
 const appear = {
   hidden: {
@@ -38,11 +38,11 @@ export default function Works() {
     >
       <motion.div className="works-container" ref={ref}>
         <div className="works-header">
-          <h1>Personal achievements</h1>
+          <h1>Works</h1>
           <div className="bar"></div>
         </div>
         <div className="workitems-container">
-          {categoriesList.map((category, i) => (
+          {workslist.map((category, i) => (
             <WorkItem
               key={i}
               name={category.name}
