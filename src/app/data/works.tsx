@@ -11,7 +11,7 @@ export const workslist = [
       " Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa off",
   },
   {
-    name: "protraits",
+    name: "portraits",
     src: portrait_main,
     description:
       " Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa off",

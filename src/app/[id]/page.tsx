@@ -5,9 +5,10 @@ import Link from "next/link";
 import { nuitImages } from "../data/nuit";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
 import Carousel from "@/components/Works/Carousel";
 import WorkPageItem from "@/components/Works/WorkPageItem";
+import { useState, useMemo } from "react";
+import { imageCollections } from "../data/works/index";
 
 interface WorksPageProps {
   params: {
@@ -60,7 +61,12 @@ const WrapperVariants = {
 
 export default function Page(props: WorksPageProps) {
   const workpage_id = props.params.id;
+  console.log(`active hero ${workpage_id}`);
   const [activeModal, setActiveModal] = useState(-1);
+
+  const currentImages = useMemo(() => {
+    return imageCollections[workpage_id] || [];
+  }, [workpage_id]);
 
   return (
     <div className="workpage">
@@ -95,7 +101,7 @@ export default function Page(props: WorksPageProps) {
           <div className="navbar-bar large"></div>
         </div>
         <div className="workpage-images">
-          {nuitImages.map((item, i) => (
+          {currentImages.map((item, i) => (
             <WorkPageItem
               key={i}
               id={i}
