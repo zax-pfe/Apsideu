@@ -4,8 +4,7 @@ import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
 import Wrapper3 from "./Wrapper3";
 import "../../styles/wrappers/wrapper.css";
-import Achievement from "../achievements";
-
+import Achievement from "../achievement";
 export default function Wrapper2() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({

@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import "../../styles/achievements/achievements.css";
 import "../../styles/achievements/achievementElement.css";
-// import AchievementElement from "./AchievementElement";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 import { achievementslist } from "@/app/data/achievements_data";
