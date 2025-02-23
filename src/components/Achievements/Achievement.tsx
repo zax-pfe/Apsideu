@@ -6,7 +6,7 @@ import "../../styles/achievements/achievementElement.css";
 // import AchievementElement from "./AchievementElement";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
-import { achievementslist } from "@/app/data/achievements";
+import { achievementslist } from "@/app/data/achievements_data";
 
 export default function Achievements() {
   const ref = useRef(null);
