@@ -1,10 +1,10 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
-import { useScroll, MotionValue, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
 import Wrapper3 from "./Wrapper3";
 import "../../styles/wrappers/wrapper.css";
-import Achievement from "../achievements/Achievement";
+import Achievement from "../achievements";
 
 export default function Wrapper2() {
   const ref = useRef(null);
