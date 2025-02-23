@@ -19,8 +19,6 @@ export default function Wrapper3() {
   return (
     <motion.div className="wrapper-3" ref={ref} style={{ y: y_wrapper_1 }}>
       <About />
-      {/* <Static_contact /> */}
-      {/* <Logo /> */}
     </motion.div>
   );
 }

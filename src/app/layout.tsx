@@ -1,6 +1,9 @@
+"use client";
 import type { Metadata } from "next";
 import { inter, jost } from "@/app/fonts";
 import "./globals.css";
+import { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
 
 // export const metadata: Metadata = {
 //   title: "Create Next App",
@@ -12,6 +15,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
     <html lang="en">
       <body className={jost.className}>

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { HiOutlineArrowSmRight } from "react-icons/hi";
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface drawerProps {
   src: StaticImageData;
@@ -50,6 +51,12 @@ const hoverVariant = {
 
 export default function WorkItem(props: drawerProps) {
   const [hoverStatus, setHoverStatus] = useState(false);
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push(`/${props.name}`);
+  };
+
   return (
     <div className="item-container">
       <motion.div
@@ -83,7 +90,11 @@ export default function WorkItem(props: drawerProps) {
               onHoverStart={() => setHoverStatus(true)}
               onHoverEnd={() => setHoverStatus(false)}
             >
-              <Link href={`/${props.name}`}>discover</Link>
+              {/* <Link href={`/${props.name}`} scroll={false}>
+                discover
+              </Link> */}
+              <div onClick={handleClick}>discoverr</div>
+
               <HiOutlineArrowSmRight color="white" scale={20} />
             </motion.div>
           </div>

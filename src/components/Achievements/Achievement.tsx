@@ -13,7 +13,7 @@ export default function Achievements() {
   const { scrollYProgress } = useScroll({
     target: ref,
   });
-  const x = useTransform(scrollYProgress, [0, 0.75], ["0%", "-58%"]);
+  const x = useTransform(scrollYProgress, [0, 0.75], ["0%", "-50%"]);
 
   return (
     <div className="achievements-container" ref={ref}>

@@ -9,6 +9,8 @@ import Carousel from "@/components/Works/Carousel";
 import WorkPageItem from "@/components/Works/WorkPageItem";
 import { useState, useMemo } from "react";
 import { imageCollections } from "../data/works/index";
+import { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
 
 interface WorksPageProps {
   params: {
@@ -30,32 +32,6 @@ const modalVariant = {
     transition: {
       duration: 0.2,
     },
-  },
-};
-
-const ImageVariants = {
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 0.6 },
-  },
-
-  hidden: {
-    y: 50,
-    opacity: 0,
-  },
-};
-
-const WrapperVariants = {
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 0.6, staggerChildren: 0.5 },
-  },
-
-  hidden: {
-    y: 50,
-    opacity: 0,
   },
 };
 
@@ -93,7 +69,7 @@ export default function Page(props: WorksPageProps) {
       <div className="workpage-content">
         <div className="workpage-navbar">
           <div className="navbar-bar small"></div>
-          <Link href="/">
+          <Link href="/" scroll={false}>
             <div className="navbar-text">
               <VerticalText>back to home</VerticalText>
             </div>

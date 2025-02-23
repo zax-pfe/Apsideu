@@ -24,6 +24,7 @@
 
 .item-image img {
   object-fit: cover;
+  object-position: top;
   /* border-radius: 10px; */
 }
 
