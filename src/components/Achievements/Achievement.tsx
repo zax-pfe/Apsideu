@@ -8,7 +8,7 @@ import { StaticImageData } from "next/image";
 import Image from "next/image";
 import { achievementslist } from "@/app/data/achievements_data";
 
-export default function Achievements() {
+export default function Achievement() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
