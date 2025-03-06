@@ -13,7 +13,7 @@ const menuItem = [
     src: HomeImageDorian,
   },
   {
-    title: "prestation",
+    title: "Achievement",
     src: HomeImageMiss,
   },
   {

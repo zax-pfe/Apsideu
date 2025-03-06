@@ -2,7 +2,6 @@
 
 import Hero from "@/components/Hero/hero";
 import "../styles/page.css";
-import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Wrapper1 from "@/components/Wrapper/Wrapper1";

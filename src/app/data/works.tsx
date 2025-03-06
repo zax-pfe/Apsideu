@@ -8,24 +8,24 @@ export const workslist = [
     name: "events",
     src: events_main,
     description:
-      " Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa off",
+      "Unique moments immortalized forever.These images capture the singular atmosphere of each event, from spontaneous laughter to shared emotions, preserving the essence of ephemeral memories",
   },
   {
     name: "portraits",
     src: portrait_main,
     description:
-      " Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa off",
+      "The soul revealed through the lens. Each portrait captures that unique spark within every person—the fleeting expression or gaze that tells a story more eloquent than words",
   },
   {
     name: "products",
     src: product_main,
     description:
-      " Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa off",
+      "The art of elevating the ordinary. These food and beverage photographs transform simple products into objects of desire through thoughtful lighting, careful composition, and meticulous attention to detail",
   },
   {
     name: "sport",
     src: sport_main,
     description:
-      " Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa off",
+      " Capturing intensity and emotion in motion. These sport photographs freeze passionate moments of determination and effort. Each image tells the story of decisive instants that define the athletic spirit.",
   },
 ];

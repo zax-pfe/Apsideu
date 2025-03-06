@@ -3,7 +3,7 @@
 import Works from "../Works/Works";
 import Wrapper2 from "./Wrapper2";
 import "../../styles/wrappers/wrapper.css";
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useScroll, MotionValue, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
 

@@ -93,7 +93,7 @@ export default function WorkItem(props: drawerProps) {
               {/* <Link href={`/${props.name}`} scroll={false}>
                 discover
               </Link> */}
-              <div onClick={handleClick}>discoverr</div>
+              <div onClick={handleClick}>discover</div>
 
               <HiOutlineArrowSmRight color="white" scale={20} />
             </motion.div>
